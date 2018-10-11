@@ -9,7 +9,7 @@ const Product = ({ price, inventory, title, imagePath }) => (
   	<div className="product-info"> 
   		<div className='product-title'>{title}</div>
     	<div className='product-price'>&#36;{price}</div>
-    	<div className='product-inventory'>{inventory ? `${inventory}` : 'Out of stock'}</div>
+    	<div className='product-inventory'>{inventory ? `${inventory} REMAINING` : 'Out of stock'}</div>
   	</div>
   </div>
 )
