@@ -1,9 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Product = ({ price, inventory, title }) => (
+// unsure of how to reference images in this component (attempted to add imagePaths to products.json)
+
+const Product = ({ price, inventory, title, imagePath }) => (
   <div>
-    {title} - &#36;{price}{inventory ? ` x ${inventory}` : null}
+  	<img src={require("../chronograph.png")} />
+  	<div className="product-info"> 
+  		<div className='product-title'>{title}</div>
+    	<div className='product-price'>&#36;{price}</div>
+    	<div className='product-inventory'>{inventory ? `${inventory} REMAINING` : 'Out of stock'}</div>
+  	</div>
   </div>
 )
 
