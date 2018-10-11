@@ -4,7 +4,7 @@ import ProductsList from './ProductsList'
 
 const setup = props => {
   const component = shallow(
-    <ProductsList title={props.title}>{props.children}</ProductsList>
+    <ProductsList>{props.children}</ProductsList>
   )
 
   return {
@@ -15,11 +15,6 @@ const setup = props => {
 }
 
 describe('ProductsList component', () => {
-  it('should render title', () => {
-    const { h3 } = setup({ title: 'Test Products' })
-    expect(h3.text()).toMatch(/^Test Products$/)
-  })
-
   it('should render children', () => {
     const { children } = setup({ title: 'Test Products', children: 'Test Children' })
     expect(children.text()).toMatch(/^Test Children$/)
