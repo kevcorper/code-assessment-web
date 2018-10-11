@@ -1,7 +1,31 @@
 body {
 	background: #F4F5F7;
+	font-family: arial;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 51px;
 }
 
 .product-item {
-	background: white;
+    background: white;
+    height: 303px;
+}
+
+.product-item img {
+    width: 455px;
+    height: 303px;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.product-info {
+    margin: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.product-title {
+	font-size: 38px;
 }
